@@ -8,9 +8,9 @@ namespace RPSLS
 {
     public class Human : Player
     {
-        public Human(string name)
+        public Human()
         {
-            this.name = name;
+            
         }
     }
 }

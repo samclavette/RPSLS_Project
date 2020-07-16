@@ -8,9 +8,9 @@ namespace RPSLS
 {
     public class AI : Player
     {
-        public AI(string name)
+        public AI()
         {
-            this.name = name;
+            
         }
     }
 }

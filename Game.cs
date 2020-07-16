@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,13 +9,12 @@ namespace RPSLS
 {
     class Game
     {
-        public string player1;
-        public string player2;
+        public Player player1;
+        public Player player2;
 
         public Game(string player1, string player2)
         {
-            this.player1 = player1;
-            this.player2 = player2;
+            player1 = new Human();
         }
 
         public void RunGame()
@@ -34,11 +34,23 @@ namespace RPSLS
             }
         }
 
-        public int ChooseHumanOrAI()
+        public void DisplayRules()
+        {
+
+        }
+
+        public string ChooseHumanOrAI()
         {
             Console.WriteLine("Please choose a number:/n1.) Single player/n2. Mulitplayer");
-            int userInput = Convert.ToInt32(Console.ReadLine());
-            return userInput;
+            string userInput = Console.ReadLine();
+            if (userInput == "1")
+            {
+                playerTwo = new Human();
+            }
+            else if (userInput == "2")
+            {
+                playerTwo = new AI();
+            }
         }
 
         public void PlayAgainstHuman()
