@@ -10,7 +10,14 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            
+          //  Gestures testGesture = new Gestures();
+            List<Player> players = new List<Player>();
+            Human human = new Human("holla at ya boy", 0, "yo");
+            AI ai = new AI();
+            players.Add(human);
+            players.Add(ai);
+
+
         }
     }
 }

@@ -8,7 +8,7 @@ namespace RPSLS
 {
     public class Human : Player
     {
-        public Human()
+        public Human(string name, int score, string chosenGesture)
         {
             
         }

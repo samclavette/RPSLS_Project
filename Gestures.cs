@@ -15,9 +15,9 @@ namespace RPSLS
         public string spock;
         public List<string> gestureList;
         
-        public Gestures(string rock, string paper, string scissors, string lizard, string spock)
+        public Gestures( string paper, string scissors, string lizard, string spock)
         {
-            this.rock = rock;
+            rock = "rock";
             this.paper = paper;
             this.scissors = scissors;
             this.lizard = lizard;
