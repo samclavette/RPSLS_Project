@@ -43,7 +43,7 @@ namespace RPSLS
 
         public void PlayAgainstHuman()
         {
-
+            
         }
 
         public void PlayAgainstAI()
