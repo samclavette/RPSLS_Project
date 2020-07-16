@@ -19,13 +19,26 @@ namespace RPSLS
 
         public void RunGame()
         {
-
+            int userInput = ChooseHumanOrAI();
+            if (userInput == 1)
+            {
+                PlayAgainstHuman();
+            }
+            else if (userInput == 2)
+            {
+                PlayAgainstAI();
+            }
+            else if (userInput != 1 | userInput != 2)
+            {
+                ChooseHumanOrAI();
+            }
         }
 
-        public void ChooseHumanOrAI()
+        public int ChooseHumanOrAI()
         {
             Console.WriteLine("Please choose a number:/n1.) Single player/n2. Mulitplayer");
             int userInput = Convert.ToInt32(Console.ReadLine());
+            return userInput;
         }
 
         public void PlayAgainstHuman()
