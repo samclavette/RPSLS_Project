@@ -26,7 +26,7 @@ namespace RPSLS
         {
             Console.WriteLine("Please choose a gesture:/n1. rock/n2. paper/n3. scissors/n4. lizard/n5. spock");
             int userInput = Convert.ToInt32(Console.ReadLine());
-            return gestures[userInput-1];
+            return gestures[userInput];
         }
     }
 }

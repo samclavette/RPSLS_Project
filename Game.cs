@@ -11,12 +11,11 @@ namespace RPSLS
     {
         public Player playerOne;
         public Player playerTwo;
-        
 
         public Game()
         {
             playerOne = new Human();
-            
+        
         }
 
         public void RunGame()
@@ -33,7 +32,7 @@ namespace RPSLS
 
         public void ChooseHumanOrAI()
         {
-            Console.WriteLine("Please choose a number:/n1.) Single player/n2. Multiplayer");
+            Console.WriteLine("Please choose a number:/n1.) Single player/n2.) Multiplayer");
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
@@ -45,18 +44,32 @@ namespace RPSLS
             }
         }
 
-        public void DisplayGesturesList()
+        public void CheckRoundWinner()
         {
-
+            string gestureOne = playerOne.ChooseGesture();
+            string gestureTwo = playerTwo.ChooseGesture();
+            if (gestureOne == gestureTwo)
+            {
+                Console.WriteLine("It's a tie! Choose again!");
+            }
+            else if (gestureOne == "rock")
+            {
+                if (gestureTwo == "lizard" || "scissors")
+                {
+                    Console.WriteLine("Player One wins this round!");
+                }
+                else if (gestureTwo == "paper" || "spock") 
+                {
+                    Console.WriteLine("Player Two wins this round!");
+                }
+            }
         }
 
-        public void PlayAgainstHuman()
+        public void PlayRound()
         {
-            
-        }
-
-        public void PlayAgainstAI()
-        {
+            playerOne.ChooseGesture();
+            playerTwo.ChooseGesture();
+            CheckRoundWinner();
 
         }
             
