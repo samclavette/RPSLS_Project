@@ -38,7 +38,11 @@ namespace RPSLS
         {
             Console.WriteLine("Please choose a number:\n1.) Single player\n2.) Multiplayer");
             string userInput = Console.ReadLine();
-            if (userInput == "2")
+            if (userInput != "1" && userInput != "2")
+            {
+                ChooseHumanOrAI();
+            }
+            else if (userInput == "2")
             {
                //Console.WriteLine("Please enter Player 2 name:");
                playerTwo = new Human();
