@@ -14,7 +14,7 @@ namespace RPSLS
 
         public Game(string player1, string player2)
         {
-            //playerOne = new Human();
+            playerOne = new Human();
         }
 
         public void RunGame()
@@ -35,7 +35,7 @@ namespace RPSLS
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
-               // playerTwo = new Human();
+               playerTwo = new Human();
             }
             else if (userInput == "2")
             {

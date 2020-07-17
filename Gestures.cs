@@ -15,14 +15,14 @@ namespace RPSLS
         public string spock;
         public List<string> gestureList;
         
-        public Gestures( string paper, string scissors, string lizard, string spock)
+        public Gestures()
         {
             rock = "rock";
-            this.paper = paper;
-            this.scissors = scissors;
-            this.lizard = lizard;
-            this.spock = spock;
-            List<string> gestureList = MakeGestureList();
+            paper = "paper";
+            scissors = "scissors";
+            lizard = "lizard";
+            spock = "spock";
+            gestureList = MakeGestureList();
         }
 
         public List<string> MakeGestureList()
@@ -34,6 +34,11 @@ namespace RPSLS
             tempGestureList.Add(lizard);
             tempGestureList.Add(spock);
             return tempGestureList;
+        }
+
+        public void ChooseRandomGesture()
+        {
+            Random rand = new Random();
         }
     }
 }
