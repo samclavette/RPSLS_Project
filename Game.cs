@@ -54,13 +54,67 @@ namespace RPSLS
             }
             else if (gestureOne == "rock")
             {
-                if (gestureTwo == "lizard" || "scissors")
+                if (gestureTwo == "lizard" || gestureTwo == "scissors")
                 {
                     Console.WriteLine("Player One wins this round!");
+                    playerOne.score++;
                 }
-                else if (gestureTwo == "paper" || "spock") 
+                else if (gestureTwo == "paper" || gestureTwo == "spock") 
                 {
                     Console.WriteLine("Player Two wins this round!");
+                    playerTwo.score++;
+                }
+            }
+            else if (gestureOne == "paper")
+            {
+                if (gestureTwo == "rock" || gestureTwo == "spock")
+                {
+                    Console.WriteLine("Player One wins this round!");
+                    playerOne.score++;
+                }
+                else if (gestureTwo == "scissors" || gestureTwo == "lizard")
+                {
+                    Console.WriteLine("Player Two wins this round!");
+                    playerTwo.score++;
+                }
+            }
+            else if (gestureOne == "scissors")
+            {
+                if (gestureTwo == "paper" || gestureTwo == "lizard")
+                {
+                    Console.WriteLine("Player One wins this round!");
+                    playerOne.score++;
+                }
+                else if (gestureTwo == "rock" || gestureTwo == "spock")
+                {
+                    Console.WriteLine("Player Two wins this round!");
+                    playerTwo.score++;
+                }
+            }
+            else if (gestureOne == "lizard")
+            {
+                if (gestureTwo == "paper" || gestureTwo == "spock")
+                {
+                    Console.WriteLine("Player One wins this round!");
+                    playerOne.score++;
+                }
+                else if (gestureTwo == "rock" || gestureTwo == "scissors")
+                {
+                    Console.WriteLine("Player Two wins this round!");
+                    playerTwo.score++;
+                }
+            }
+            else if (gestureOne == "spock")
+            {
+                if (gestureTwo == "rock" || gestureTwo == "scissors")
+                {
+                    Console.WriteLine("Player One wins this round!");
+                    playerOne.score++;
+                }
+                else if (gestureTwo == "paper" || gestureTwo == "lizard")
+                {
+                    Console.WriteLine("Player Two wins this round!");
+                    playerTwo.score++;
                 }
             }
         }
