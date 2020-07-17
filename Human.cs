@@ -24,9 +24,9 @@ namespace RPSLS
 
         public override string ChooseGesture()
         {
-            Console.WriteLine("Please choose a gesture:/n1. rock/n2. paper/n3. scissors/n4. lizard/n5. spock");
+            Console.WriteLine("Please choose a number:\n1. rock\n2. paper\n3. scissors\n4. lizard\n5. spock");
             int userInput = Convert.ToInt32(Console.ReadLine());
-            return gestures[userInput];
+            return gestures[userInput-1];
         }
     }
 }

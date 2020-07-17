@@ -36,7 +36,7 @@ namespace RPSLS
 
         public void ChooseHumanOrAI()
         {
-            Console.WriteLine("Please choose a number:/n1.) Single player/n2.) Multiplayer");
+            Console.WriteLine("Please choose a number:\n1.) Single player\n2.) Multiplayer");
             string userInput = Console.ReadLine();
             if (userInput == "1")
             {
