@@ -8,26 +8,27 @@ namespace RPSLS
 {
     class Gestures
     {
-        public string rock;
-        public string paper;
-        public string scissors;
-        public string lizard;
-        public string spock;
-        public List<string> gestureList;
+        public string type;
+        Gestures rock;
+        Gestures paper;
+        Gestures scissors;
+        Gestures lizard;
+        Gestures spock;
+        List<Gestures> gestureList = new List<Gestures>();
         
-        public Gestures()
+        public Gestures(string type)
         {
-            rock = "rock";
-            paper = "paper";
-            scissors = "scissors";
-            lizard = "lizard";
-            spock = "spock";
+            rock = new Gestures("rock");
+            paper = new Gestures("paper");
+            scissors = new Gestures ("scissors");
+            lizard = new Gestures ("lizard");
+            spock = new Gestures ("spock");
             gestureList = MakeGestureList();
         }
 
-        public List<string> MakeGestureList()
+        public List<Gestures> MakeGestureList()
         {
-            List<string> tempGestureList = new List<string>();
+            List<Gestures> tempGestureList = new List<Gestures>();
             tempGestureList.Add(rock);
             tempGestureList.Add(paper);
             tempGestureList.Add(scissors);

@@ -11,6 +11,7 @@ namespace RPSLS
         public string name;
         public int score;
         public string chosenGesture;
+        List<Gestures> gestures;
 
         public Player()
         {
