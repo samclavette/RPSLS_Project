@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,21 +9,20 @@ namespace RPSLS
 {
     public class Human : Player
     {
-        public Human(string name, int score, string chosenGesture)
+        public Human()
         {
-            this.name = name;
-            score = 0;
-            this.chosenGesture = chosenGesture;
+            name = ReceiveNameInput();
         }
 
-        public void ReceiveNameInput()
+
+        public string ReceiveNameInput()
         {
             Console.WriteLine("Please enter your name: ");
             string nameInput = Console.ReadLine();
-            name = nameInput;
+            return nameInput;
         }
 
-        public void ChooseGesture()
+        public override void ChooseGesture()
         {
 
         }

@@ -10,7 +10,8 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-           
+            //Player humanPlayerWArguments = new Human("Yo Boy", 0, "gesture");
+            Player humanPlayerWithoutArguements = new Human();
         }
     }
 }

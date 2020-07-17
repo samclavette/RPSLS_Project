@@ -11,10 +11,12 @@ namespace RPSLS
     {
         public Player playerOne;
         public Player playerTwo;
+        
 
-        public Game(string player1, string player2)
+        public Game()
         {
             playerOne = new Human();
+            
         }
 
         public void RunGame()
@@ -41,6 +43,11 @@ namespace RPSLS
             {
                 playerTwo = new AI();
             }
+        }
+
+        public void DisplayGesturesList()
+        {
+
         }
 
         public void PlayAgainstHuman()

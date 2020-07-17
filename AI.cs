@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -9,20 +10,20 @@ namespace RPSLS
 {
     public class AI : Player
     {
-        public AI()
-        {
+
             Random rand = new Random();
 
-            public AI(string name, int score, string chosenGesture)
+            public AI()
             {
                 name = "Computer";
-                score = 0;
             }
 
-            public void ChooseRandomGesture()
+            public override string ChooseGesture()
             {
-
+                rand = new Random();
+                int randomNumber = rand.Next(5);
+                return gestures[randomNumber];          
             }
-        }
+        
     }
 }

@@ -9,18 +9,19 @@ namespace RPSLS
     public abstract class Player
     {
         public string name;
-        public int score;
+        public int score = 0;
         public string chosenGesture;
-        List<Gestures> gestures;
+        public List<string> gestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock"};
 
         public Player()
         {
             
         }
 
-        public void ChooseGesture()
-        {
 
-        }
+
+        public abstract string ChooseGesture();
+        
+        
     }
 }
