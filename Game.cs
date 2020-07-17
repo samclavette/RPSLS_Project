@@ -22,11 +22,15 @@ namespace RPSLS
         {
             DisplayRules();
             ChooseHumanOrAI();
+            while (playerOne.score < 2 || playerTwo.score < 2)
+            {
+                PlayRound();
+            }
         }
 
         public void DisplayRules()
         {
-            Console.WriteLine("You will be playing a variation of rock-paper-scissors with 2 (lizard,Spock) added gestures against an opponent. It will be a best of 3 series. Press any key to begin.");
+            Console.WriteLine("You will be playing a variation of rock-paper-scissors with 2 (lizard,Spock) added gestures against an opponent. It will be a best of 3 series. Press enter to begin.");
             Console.ReadLine();
         }
 
