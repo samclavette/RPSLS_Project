@@ -24,7 +24,7 @@ namespace RPSLS
             ChooseHumanOrAI();
             while (playerOne.score < 2 || playerTwo.score < 2)
             {
-                PlayRound();
+                CheckRoundWinner();
             }
         }
 
@@ -38,11 +38,12 @@ namespace RPSLS
         {
             Console.WriteLine("Please choose a number:\n1.) Single player\n2.) Multiplayer");
             string userInput = Console.ReadLine();
-            if (userInput == "1")
+            if (userInput == "2")
             {
+               //Console.WriteLine("Please enter Player 2 name:");
                playerTwo = new Human();
             }
-            else if (userInput == "2")
+            else if (userInput == "1")
             {
                 playerTwo = new AI();
             }
@@ -123,13 +124,13 @@ namespace RPSLS
             }
         }
 
-        public void PlayRound()
-        {
-            playerOne.ChooseGesture();
-            playerTwo.ChooseGesture();
-            CheckRoundWinner();
+        //public void PlayRound()
+        //{
+        //    playerOne.ChooseGesture();
+        //    playerTwo.ChooseGesture();
+        //    CheckRoundWinner();
 
-        }
+        //}
             
     }
 }
