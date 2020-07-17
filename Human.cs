@@ -26,7 +26,7 @@ namespace RPSLS
         {
             string userInput = ""; 
             
-            while (!userInput.Equals("1"))
+            while (!userInput.Equals("1") && !userInput.Equals("2") && !userInput.Equals("3") && !userInput.Equals("4") && !userInput.Equals("5"))
             {
                 Console.WriteLine("Please choose a number:\n1. rock\n2. paper\n3. scissors\n4. lizard\n5. spock");
                 userInput = Console.ReadLine();

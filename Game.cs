@@ -22,7 +22,7 @@ namespace RPSLS
         {
             DisplayRules();
             ChooseHumanOrAI();
-            while (playerOne.score < 2 || playerTwo.score < 2)
+            while (playerOne.score < 3 && playerTwo.score < 3)
             {
                 CheckRoundWinner();
             }
